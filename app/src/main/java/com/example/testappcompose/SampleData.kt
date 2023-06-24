@@ -1,10 +1,41 @@
 import com.example.testappcompose.Message
+import com.example.testappcompose.Module
 
 /**
  * SampleData for Jetpack Compose Tutorial 
  */
 object SampleData {
     // Sample conversation data
+    val ModuleData = listOf(
+        Module(
+            "Home",
+            "HomeScren"
+        ),
+        Module(
+            "Messages",
+            "Messages"
+        ),
+        Module(
+            "Profile",
+            "Profile"
+        ),
+        Module(
+            "Wall",
+            "Wall"
+        ),
+        Module(
+            "Status",
+            "Status"
+        ),
+        Module(
+            "Settings",
+            "Settings"
+        ),
+        Module(
+            "Logout",
+            "Logout"
+        ),
+    )
     val conversationSample = listOf(
         Message(
             "Lexi",
