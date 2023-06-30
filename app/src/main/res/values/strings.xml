@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TestAppCompose</string>
+    <string name="title_activity_form_screen">FormScreen</string>
+    <string name="title_activity_global_ui">GlobalUI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
 </resources>

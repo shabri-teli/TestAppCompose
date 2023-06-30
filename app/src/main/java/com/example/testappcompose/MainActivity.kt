@@ -2,6 +2,7 @@ package com.example.testappcompose
 
 import SampleData
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -30,6 +31,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
+import com.example.testappcompose.ui.FormScreen
 
 private var isClicked:Boolean ?=false
 
@@ -178,6 +180,9 @@ fun ModuleItem(modules: Module) {
 
 fun ViewModules(context: Context, moduleName: String) {
     Toast.makeText(context, "$moduleName", Toast.LENGTH_SHORT).show()
+    val goToFormScreen = Intent(context, FormScreen::class.java)
+    goToFormScreen.putExtra("moduleName",moduleName ?: "")
+    context.startActivity(goToFormScreen)
 }
 
 @Composable
@@ -198,6 +203,7 @@ fun showImage(){
     }
 }
 
+@Preview
 @Composable
 fun TopBar(){
     Surface(color = colorResource(id = R.color.gray), elevation = 1.dp, modifier = Modifier.fillMaxWidth()) {
@@ -256,13 +262,6 @@ fun InflateModules(modules: List<Module>){
 fun PreviewMessageCard() {
     MessageCardItem(msg = Message("Name", "this is the content."))
 }
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewTopView() {
-    TopBar()
-}
-
 
 @Preview
 @Composable
