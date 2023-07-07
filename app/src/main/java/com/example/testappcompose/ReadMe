@@ -1,0 +1,11 @@
+splash screen
+1. Go to Drawables -> new -> Vector Asset -> logo or agive ur name to a file
+
+2. Go to Drawables -> new Resource file -> splash (day and night)
+    windowSplashScreenBackground
+    WindowSplashscreenAnimation
+    postSplashscreenTheme
+
+3. add installSplashscreen() after super. in oncreate file
+
+Add styles in Theme

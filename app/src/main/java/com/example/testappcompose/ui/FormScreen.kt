@@ -1,8 +1,12 @@
 package com.example.testappcompose.ui
 
+import android.R
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,18 +17,26 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.testappcompose.MainActivity
 import com.example.testappcompose.ui.ui.CreateButton
 import com.example.testappcompose.ui.ui.showButton
 import com.example.testappcompose.ui.ui.theme.TestAppComposeTheme
+import com.google.common.io.Resources.getResource
+
 
 private var context: Context ?= null
 
 class FormScreen : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Handle the splash screen trasition
+        Thread.sleep(1000)
+        val splashScreen = installSplashScreen()
         setContent {
             TestAppComposeTheme {
                 // A surface container using the 'background' color from the theme
